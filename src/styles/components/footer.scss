@@ -1,0 +1,54 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  color: $WhiteColor;
+  gap: 20px;
+  padding-block: 30px;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__contacts {
+    position: relative;
+    margin-block: 30px;
+    transform: translateX(10px);
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      background-color: $main;
+      transform: translateX(-10px);
+      top: -25px;
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      background-color: $main;
+      transform: translateX(-10px);
+      bottom: -20px;
+      width: 100%;
+    }
+
+    @include onTablet {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__contacts-list {
+    & > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

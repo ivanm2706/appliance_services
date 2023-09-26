@@ -1,0 +1,47 @@
+.callUs {
+  line-height: 28px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  margin-inline: auto;
+  padding-inline: 10px;
+
+  @include onDesktop {
+    padding-inline: 0;
+  }
+
+  &--white {
+    & .callUs__tel,
+    & .callUs__contact,
+    & p {
+      color: $WhiteColor;
+    }
+  }
+
+  & > :nth-child(n) {
+    display: inline;
+  }
+
+  &__tel {
+    @include text(16px, 700);
+    color: #01184f;
+    margin-inline: 5px;
+    transition: all 300ms;
+
+    &:hover {
+      color: #0373af;
+    }
+  }
+
+  &__contact {
+    color: #01184f;
+    text-decoration: underline;
+    margin-inline: 5px;
+    transition: all 300ms;
+
+    &:hover {
+      color: #0373af;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.container {
+  &--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &--maxW-600 {
+    max-width: 600px;
+  }
+
+  &--maxW-800 {
+    max-width: 800px;
+  }
+
+  &--page {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &--pi-10 {
+    padding-inline: 10px;
+
+    @include onDesktop {
+      padding-inline: 0;
+    }
+  }
+
+  &--pb-80 {
+    padding-block: 30px;
+    position: relative;
+
+    @include onTablet {
+      padding-block: 50px;
+    }
+  }
+
+  &--pb-mainSection {
+    padding-block: 30px;
+    position: relative;
+
+    @include onTablet {
+      padding-block: 50px;
+    }
+  }
+
+  &--mt-20 {
+    margin-top: 20px;
+  }
+
+  &--mb-35 {
+    margin-bottom: 35px;
+  }
+
+  &--mb-30 {
+    margin-bottom: 30px;
+  }
+
+  &--mb-15 {
+    margin-bottom: 15px;
+  }
+
+  &--pb-15 {
+    padding-bottom: 15px;
+  }
+
+  &--pb-30 {
+    padding-bottom: 30px;
+  }
+}

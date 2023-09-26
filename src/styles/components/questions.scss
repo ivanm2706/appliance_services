@@ -1,0 +1,67 @@
+.questions {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  position: relative;
+
+  &__fake {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    bottom: 50%;
+    right: 50%;
+  }
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__images {
+    position: relative;
+    height: 370px;
+    @include bg-i('../../images/konsultacija-bg.png', 730px, bottom);
+
+    @include onTablet {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &__block {
+    padding: 50px 10px 70px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include text(24px, 700);
+  }
+
+  &__subtitle {
+    @include text(16px, 400);
+    margin-bottom: 25px;
+  }
+
+  &__consult {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 317px;
+    height: 400px;
+  }
+
+  &__img-consult {
+    display: block;
+    margin-inline: auto;
+  }
+
+  &__img-consult-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    height: 400px;
+    overflow: hidden;
+  }
+}

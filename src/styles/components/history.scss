@@ -1,0 +1,30 @@
+.history {
+  color: rgb(173, 175, 179);
+  @include text(14px, 400);
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child)::before {
+      content: '/';
+      display: block;
+      position: absolute;
+      left: -12px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: rgb(173, 175, 179);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

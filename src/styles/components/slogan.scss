@@ -1,0 +1,20 @@
+.slogan {
+  position: relative;
+  max-width: 1000px;
+  margin-inline: auto;
+  border-radius: 20px;
+
+  &__img-slogan {
+    text-align: center;
+  }
+
+  &__image-slogan {
+    max-width: 500px;
+  }
+
+  &__title-slogan {
+    @include text(16px, 400, 1.2px);
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}

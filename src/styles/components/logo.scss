@@ -1,0 +1,32 @@
+.logo {
+  border-radius: 40px;
+  overflow: hidden;
+  transition: transform 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--nav {
+    position: absolute;
+    top: 5px;
+  }
+
+  &__img {
+    transition: all 300ms;
+    display: block;
+    height: 80px;
+
+    &--footer {
+      @include onSmallDesktop {
+        height: 110px;
+      }
+    }
+
+    &--big {
+      @include onSmallDesktop {
+        height: 90px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.background {
+  &--dark {
+    @extend %bgDark;
+  }
+
+  &--light {
+    @extend %bgLight;
+  }
+
+  &--bland {
+    background-color: #0080ff1c;
+  }
+
+  &--benefits {
+    @include bg-i('../../images/benefits.jpg');
+    position: relative;
+  }
+}

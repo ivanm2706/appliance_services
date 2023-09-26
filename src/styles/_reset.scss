@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

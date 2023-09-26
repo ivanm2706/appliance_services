@@ -1,0 +1,53 @@
+@mixin onMiniTablet {
+  @media screen and (min-width: 464px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media screen and (min-width: 744px) {
+    @content;
+  }
+}
+
+@mixin onSmallDesktop {
+  @media screen and (min-width: 970px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media screen and (min-width: 1260px) {
+    @content;
+  }
+}
+
+@mixin bg-i($url, $size: cover, $position: center, $repeat: no-repeat) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+@mixin text($size: 16px, $weight: 400, $l-spase: 0) {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: $l-spase;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin pos(
+  $position,
+  $top: none,
+  $right: none,
+  $bottom: none,
+  $left: none,
+  $index: none
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $index;
+}

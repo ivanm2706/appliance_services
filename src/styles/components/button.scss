@@ -1,0 +1,167 @@
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border-width: 0;
+  @include text(16px);
+  text-transform: uppercase;
+  position: relative;
+
+  &--menuClose {
+    border: none;
+    margin-top: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    background-color: $buttonColor;
+    position: relative;
+    height: 30px;
+    width: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background-color: $WhiteColor;
+      transform: translate(-3px, -1px) rotate(314deg);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background-color: $WhiteColor;
+      transform: translate(-3px, -1px) rotate(226deg);
+    }
+
+    &:hover {
+      animation: blink 0.5s linear;
+    }
+  }
+
+  &--next {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin: auto 0;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background-color: $contact;
+      transition: all 300ms;
+      transform: translate(-3px, -1px);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background-color: $contact;
+      transition: all 300ms;
+      transform: translate(-3px, -1px) rotate(90deg);
+    }
+
+    &:hover {
+      &::after {
+        background-color: $primary;
+      }
+
+      &::before {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &--nextActive {
+    &::after {
+      transform: translate(-3px, -1px) rotate(45deg);
+    }
+
+    &::before {
+      transform: translate(-3px, -1px) rotate(135deg);
+    }
+  }
+
+  &--book {
+    background-color: $buttonColor;
+    color: $WhiteColor;
+    padding: 7px 40px;
+    border-radius: 28px;
+    transition: all 300ms;
+
+    &:hover {
+      scale: 1.05;
+      background-color: $first;
+    }
+
+    &::before {
+      content: '';
+      @extend %frame;
+    }
+  }
+
+  &--long {
+    width: 100%;
+  }
+
+  &--shake {
+    animation: shake ease-in 2s;
+  }
+
+  &--card {
+    border: 1px solid $WhiteColor;
+    background-color: $bgColor;
+    color: $WhiteColor;
+    text-align: center;
+    transition: all 300ms;
+    padding: 10px 20px;
+    @include text(12px, 400);
+    text-transform: capitalize;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+
+  @keyframes blink {
+    from {
+      background-color: $hoverColor;
+    }
+    to {
+      background-color: $buttonColor;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  }
+}

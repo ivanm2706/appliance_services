@@ -1,0 +1,39 @@
+.benefits {
+  &__list {
+    position: relative;
+    z-index: 52;
+    color: $WhiteColor;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    padding: 40px 0 0 40px;
+    text-align: justify;
+    max-width: 500px;
+    @include bg-i(
+      '../../images/benefitsPlus.svg',
+      67px 86px,
+      left top,
+      no-repeat
+    );
+
+    @media screen and (max-width: 743px) {
+      margin-inline: auto;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__content {
+    @include text(16px, 400);
+    line-height: 1.5;
+  }
+}

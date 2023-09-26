@@ -1,0 +1,86 @@
+$borderRadiusBlock: 12px;
+%borderBlock {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  border-radius: $borderRadiusBlock;
+}
+
+.frame {
+  position: relative;
+
+  &--white {
+    & .frame__background {
+      background-color: #ffffff4d;
+    }
+
+    & .frame__shaddow {
+      box-shadow: rgba(3, 115, 175, 0.2) 0px 0px 30px 0px;
+    }
+
+    & .frame__border {
+      &::before {
+        @extend %borderBlock;
+        border: 2px solid #bad8eb;
+        z-index: 5;
+      }
+    }
+  }
+
+  &__position {
+    position: relative;
+    z-index: 6;
+  }
+
+  &--light {
+    & .frame__background {
+      @extend %bgLight;
+    }
+  }
+
+  &--dark {
+    & .frame__shaddow {
+      box-shadow: rgba(3, 115, 175, 0.2) 0px 0px 30px 0px;
+    }
+
+    & .frame__background {
+      @extend %bgDark;
+    }
+    & .frame__border {
+      &::before {
+        @extend %borderBlock;
+        border: 2px solid $main;
+      }
+    }
+  }
+
+  &__border-radius {
+    border-radius: $borderRadiusBlock;
+    overflow: hidden;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    transform: translate(50%, 0);
+    top: -17px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    @include bg-i('../../images/icons/quotes.svg');
+    background-color: $main;
+  }
+
+  &__padding {
+    padding: 20px;
+
+    @include onTablet {
+      padding: 30px;
+    }
+  }
+}

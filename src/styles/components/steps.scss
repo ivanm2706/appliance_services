@@ -1,0 +1,47 @@
+.steps {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+
+    @include onTablet {
+      gap: 15px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    transition: all 300ms;
+
+    &:hover {
+      transform: translate(0, -20px);
+
+      & .steps__number {
+        transform: rotate(360deg);
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__number {
+    background-color: $main;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: $WhiteColor;
+    margin-inline: auto;
+    margin-block-end: 15px;
+    line-height: 60px;
+    font-size: 50px;
+    font-weight: 600;
+    transition: all 300ms;
+  }
+
+  &__description {
+    max-width: 390px;
+    @include text(14px, 400);
+  }
+}

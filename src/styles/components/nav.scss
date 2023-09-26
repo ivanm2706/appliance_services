@@ -1,0 +1,115 @@
+.nav {
+  &--tabletDesctop {
+    display: none;
+
+    @include onSmallDesktop {
+      display: flex;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+
+    &--mobile {
+      display: block;
+      padding: 0 10px 0 30px;
+
+      & .nav__servicesList {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      & .nav__link--services {
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    &--services {
+      height: 0;
+      overflow: hidden;
+      transition: all 300ms;
+    }
+
+    &--servicesOpen {
+      height: 295px;
+    }
+
+    &--hover {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      width: 500px;
+      background-color: #1d1d2adb;
+      top: 57px;
+      display: none;
+      z-index: 40;
+      grid-template-columns: auto auto;
+      padding: 20px;
+      transition: all 200ms;
+
+      @include onTablet {
+        display: grid;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    @include text(18px, 600);
+    color: $WhiteColor;
+    display: inline-block;
+    padding-block: 14px;
+    transition: all 300ms;
+    position: relative;
+
+    &:hover {
+      color: $buttonColor;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        width: 100%;
+        height: 2px;
+        background-color: $buttonColor;
+      }
+    }
+
+    &--active {
+      color: $buttonColor;
+    }
+
+    &--services {
+      &::after {
+        content: '';
+        display: inline-block;
+        transition: all 300ms;
+        width: 20px;
+        height: 10px;
+        margin-left: 5px;
+        background-image: url(../../images/icons/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &:hover {
+        &::after {
+          background-image: url(../../images/icons/arrow-down-blue.svg);
+        }
+      }
+    }
+    &--services-active {
+      &::after {
+        background-image: url(../../images/icons/arrow-down-blue.svg);
+      }
+    }
+  }
+}

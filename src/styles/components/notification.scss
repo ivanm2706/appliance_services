@@ -1,0 +1,12 @@
+.notification {
+  &--error {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f3dada7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include text(25px, 500);
+    color: red;
+  }
+}

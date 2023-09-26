@@ -1,0 +1,20 @@
+.shaddow {
+  &--open {
+    @include pos(absolute, 0, 0, 0, 0, 40);
+    background-color: $shadowColor;
+  }
+
+  &--header {
+    @include pos(absolute, 0, 0, 0, 0, 10);
+    background-color: #0000006b;
+  }
+
+  &--mobile-navigation {
+    @include pos(none, 0, 0, 0, 0, 61);
+  }
+
+  &--open-mobile-navigation {
+    position: fixed;
+    background-color: #18172a87;
+  }
+}

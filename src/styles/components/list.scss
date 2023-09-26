@@ -1,0 +1,64 @@
+.list {
+  &--block {
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--ordered {
+    @include text(16px, 400);
+    color: $textColor;
+    line-height: 28.56px;
+
+    & > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--block-wrap {
+    & > li {
+      max-width: fit-content;
+    }
+
+    @include onTablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 45px;
+    @include text(16.8px);
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 15px;
+      top: 1px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &--markOK {
+      &::before {
+        @include bg-i('../../images/icons/tick.svg');
+      }
+    }
+  }
+
+  &__title {
+    @include text(17px);
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include onTablet {
+      margin-bottom: 25px;
+    }
+  }
+}
