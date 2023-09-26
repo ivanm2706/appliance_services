@@ -1,0 +1,15 @@
+# https://editorconfig.org/ - сайт
+# для универсальных настроек при работе с разными IDE
+# установка расширения EditorConfig for VS Code
+# команда Alt + shift + F
+
+# ГЛАВНЫЙ EditorConfig file
+root = true
+
+# формат окончания строк(+ в конце пустая строка) в every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 2
