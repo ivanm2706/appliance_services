@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "./static/css/main.9e5dcaf4.css",
+    "main.js": "./static/js/main.4fb90698.js",
+    "static/media/home-bg.jpg": "./static/media/home-bg.35ac0cd014fe98e1435b.jpg",
+    "static/media/title.jpg": "./static/media/title.aa0ea783a6556e62456e.jpg",
+    "static/media/benefits.jpg": "./static/media/benefits.8dd92a79899f111be57a.jpg",
+    "static/media/texture-on-dark.png": "./static/media/texture-on-dark.5d17586d573da88e4024.png",
+    "static/media/on-gradient-bg.png": "./static/media/on-gradient-bg.8cb90905d34e607d0845.png",
+    "static/media/freezer.jpg": "./static/media/freezer.2b289ce4a64836f3e3ef.jpg",
+    "static/media/konsultacija-bg.png": "./static/media/konsultacija-bg.7db4518786c80350bd0b.png",
+    "static/media/oven.jpg": "./static/media/oven.e80c6a35fa0ee71c3a1d.jpg",
+    "static/media/dishwasher.jpg": "./static/media/dishwasher.86ac19e9afb94dd64b6c.jpg",
+    "static/media/dryer.jpg": "./static/media/dryer.da7f6a6d46431cb987b4.jpg",
+    "static/media/garbage.jpg": "./static/media/garbage.e3bb48d102baa18071c0.jpg",
+    "static/media/washing.jpg": "./static/media/washing.3b2320eaf6264a886b00.jpg",
+    "static/media/emailHover.svg": "./static/media/emailHover.e819189599076a174de2.svg",
+    "static/media/email.svg": "./static/media/email.8cc6dfdeaff6cee0c711.svg",
+    "static/media/phone-hover.svg": "./static/media/phone-hover.4a68848985a8f04c5e36.svg",
+    "static/media/phone.svg": "./static/media/phone.76cd5617e6e790cb2095.svg",
+    "index.html": "./index.html",
+    "static/media/benefitsPlus.svg": "./static/media/benefitsPlus.0a8654b78149ebb372ce.svg",
+    "static/media/clock.svg": "./static/media/clock.5507a100f551417d1cf4.svg",
+    "static/media/tick.svg": "./static/media/tick.8548e8b1c198c395b8e3.svg",
+    "static/media/quotes.svg": "./static/media/quotes.13fe84fbee0a0442124e.svg",
+    "static/media/arrow-down-blue.svg": "./static/media/arrow-down-blue.3c538cb0b83c3d45c1c0.svg",
+    "static/media/arrow-down.svg": "./static/media/arrow-down.1a9fc18f1349d6c53f29.svg",
+    "static/media/line.svg": "./static/media/line.de356e2b93a8e744ff04.svg",
+    "main.9e5dcaf4.css.map": "./static/css/main.9e5dcaf4.css.map",
+    "main.4fb90698.js.map": "./static/js/main.4fb90698.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e5dcaf4.css",
+    "static/js/main.4fb90698.js"
+  ]
+}
